@@ -1,0 +1,80 @@
+body {
+  color: #ffff33;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: black;
+}
+
+a { text-decoration: none; color: #ffffff; }
+a:hover { text-decoration: underline; }
+
+#calc img {
+  //border: 1px solid green;
+  border-radius: 50%;
+}
+
+.footer {
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+  letter-spacing: 1.5px;
+  padding-top: 5px;
+  //border-top: 3px dashed #ffff33;
+  text-decoration: none;
+  position:fixed;
+  bottom:0px;
+  left:30px;
+  z-index:1}  
+}
+
+.footer a:hover { text-decoration:underline }
+
+#display {
+  float: left;
+  text-align: left;
+  padding: 4px;
+  border-radius: 0% 5% 5% 0%;
+  margin: auto;
+  width: 88px;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: center;
+  top: -280px;
+  font-family: 'courier';
+  color: lime;
+  background-color: green;
+
+}
+
+#ops {
+  float: left;
+  text-align: left;
+  padding: 4px;
+  border-radius: 5% 0% 0% 5%;
+  margin: auto;
+  width: 20px;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: center;
+  //position: relative;
+  top: -280px;
+  font-family: 'courier';
+  color: lime;
+  background-color: green;
+
+}
+
+#display-container {
+  // float: left;
+  text-align: left;
+  padding: 5px;
+  border-radius: 5%;
+  margin: auto;
+  width: 124px;
+  height: 40px;
+  position: relative;
+  top: -280px;
+  left: -3px;
+  font-family: 'courier';
+  background-color: black;
+}
