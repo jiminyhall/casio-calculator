@@ -53,7 +53,7 @@ function press(name) {
       mode = "t2-0";
     }
   }
-  
+
   else if (mode === "t2-0") {
     console.log("MODE t2-0");
     if (/[1-9]/.test(name)) {
@@ -86,7 +86,7 @@ function press(name) {
           displayVal = displayVal + opsTermVal;
           break;
       }
-      
+
       console.log("Op Equals: " + displayVal + " len: " + displayVal.toString().length);
       if(displayVal.toString().length > 10) {
         document.getElementById("display").innerHTML = "Err: Size";
@@ -99,11 +99,11 @@ function press(name) {
       console.log("t2-0 nothing");
     }
   }
-  
+
   else if (mode === "t2-1") {
-    
+
     console.log("MODE t2-1");
-    
+
     if (/[0-9]/.test(name) && opsTermVal.length < 10) {
       console.log("0-9");
       opsTermVal += name;
@@ -127,7 +127,7 @@ function press(name) {
           displayVal = displayVal + opsTermVal;
           break;
       }
-      
+
       console.log("Op Equals: " + displayVal + " len: " + displayVal.toString().length);
       if(displayVal.toString().length > 10) {
         document.getElementById("display").innerHTML = "Err: Size";
@@ -155,7 +155,7 @@ function press(name) {
           displayVal = displayVal + opsTermVal;
           break;
       }
-      
+
       console.log("Equals: " + displayVal + " len: " + displayVal.toString().length);
       if(displayVal.toString().length > 10) {
         document.getElementById("display").innerHTML = "Err: Size";
@@ -164,20 +164,20 @@ function press(name) {
         document.getElementById("display").innerHTML = displayVal;
         mode = "t2-0";
       }
-    }   
+    }
   }
-  
+
   else {
     console.log("no mode");
   }
   /* console.log(name);
-  
+
   if ((displayVal.length > 8) && ((name === ".") || (name === "1") || (name==="2") || (name==="3") || (name==="4")|| (name==="5") || (name==="6") || (name==="7")|| (name==="8")|| (name==="9"))) {
     console.log("too many chars");
     return;
   }
-  
-  
+
+
   switch (name) {
     case "*":
     case "+":
@@ -210,7 +210,7 @@ function press(name) {
         document.getElementById("display").innerHTML = opsTermVal;
         break;
       }
-      
+
     case "1":
     case "2":
     case "3":
@@ -228,7 +228,7 @@ function press(name) {
         document.getElementById("display").innerHTML = displayVal;
       } else if (opsVal !== "" && opsTermVal === "") {
         opsTermVal = name;
-        document.getElementById("display").innerHTML = opsTermVal;         
+        document.getElementById("display").innerHTML = opsTermVal;
       } else if (opsVal === "") {
         opsTermVal += name;
         document.getElementById("display").innerHTML = opsTermVal;
@@ -244,7 +244,24 @@ function press(name) {
       break;
     default:
   }
-  
-  */
 
+  */
+}
+
+var aboutBtn = document.getElementById("aboutBtn");
+var span = document.getElementsByClassName("close")[0];
+var modal = document.getElementById("aboutModal");
+
+aboutBtn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
