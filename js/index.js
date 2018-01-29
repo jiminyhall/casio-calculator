@@ -83,7 +83,7 @@ function press(name) {
           displayVal = displayVal - opsTermVal;
           break;
         case "+":
-          displayVal = displayVal + opsTermVal;
+          displayVal = parseInt(displayVal) + parseInt(opsTermVal);
           break;
       }
 
@@ -124,7 +124,7 @@ function press(name) {
           displayVal = displayVal - opsTermVal;
           break;
         case "+":
-          displayVal = displayVal + opsTermVal;
+          displayVal = parseInt(displayVal) + parseInt(opsTermVal);
           break;
       }
 
@@ -152,7 +152,7 @@ function press(name) {
           displayVal = displayVal - opsTermVal;
           break;
         case "+":
-          displayVal = displayVal + opsTermVal;
+          displayVal = parseInt(displayVal) + parseInt(opsTermVal);
           break;
       }
 
@@ -170,82 +170,6 @@ function press(name) {
   else {
     console.log("no mode");
   }
-  /* console.log(name);
-
-  if ((displayVal.length > 8) && ((name === ".") || (name === "1") || (name==="2") || (name==="3") || (name==="4")|| (name==="5") || (name==="6") || (name==="7")|| (name==="8")|| (name==="9"))) {
-    console.log("too many chars");
-    return;
-  }
-
-
-  switch (name) {
-    case "*":
-    case "+":
-    case "-":
-    case "/":
-      console.log(name + " operator on " + displayVal);
-      if(displayVal !== "") {
-        console.log(name);
-        opsVal = name;
-        document.getElementById("ops").innerHTML = opsVal;
-      }
-      break;
-    case "=":
-
-    case "0":
-      if (displayVal === "")
-        break;
-      if(opsVal !== "")
-        if(opsTermVal === "")
-          break;
-    case ".":
-      if (displayVal === "") {
-        displayVal = "0.";
-        document.getElementById("display").innerHTML = displayVal;
-        break;
-      } else if (displayVal.contains(".")) {
-        break;
-      } else if (opsVal !== "" && opsTermVal ==="") {
-        opsTermVal = "0.";
-        document.getElementById("display").innerHTML = opsTermVal;
-        break;
-      }
-
-    case "1":
-    case "2":
-    case "3":
-    case "4":
-    case "5":
-    case "6":
-    case "7":
-    case "8":
-    case "9":
-      if (displayVal === "" && opsVal === "") {
-        displayVal = name;
-        document.getElementById("display").innerHTML = displayVal;
-      } else if (displayVal !== "" && opsVal === "") {
-        displayVal += name;
-        document.getElementById("display").innerHTML = displayVal;
-      } else if (opsVal !== "" && opsTermVal === "") {
-        opsTermVal = name;
-        document.getElementById("display").innerHTML = opsTermVal;
-      } else if (opsVal === "") {
-        opsTermVal += name;
-        document.getElementById("display").innerHTML = opsTermVal;
-      }
-      break;
-    case "clear":
-      console.log('Clear');
-      document.getElementById("display").innerHTML = "";
-      displayVal = "";
-      opsTermVal = "";
-      document.getElementById("ops").innerHTML = "";
-      opsVal = "";
-      break;
-    default:
-  }
-
-  */
 }
 
 var aboutBtn = document.getElementById("aboutBtn");
