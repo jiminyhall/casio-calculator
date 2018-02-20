@@ -189,3 +189,26 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+window.onresize = function(event) {
+
+  // resize the output screen
+  var ratio = document.getElementById("casio-map").width / document.getElementById("casio-map").naturalWidth;
+  var newBuffer = -280*ratio;
+  var newHeight = 40*ratio;
+  var newWidth = 124*ratio;
+  document.getElementById("display-container").style.top = newBuffer + "px";
+  document.getElementById("display-container").style.height = newHeight + "px";
+  document.getElementById("display-container").style.width = newWidth + "px";
+  console.log("Window resized. Image width: " + document.getElementById("casio-map").width + " new buffer: " + newBuffer);
+}
+
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+
+  /*
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+  */
+});

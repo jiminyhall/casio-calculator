@@ -13,6 +13,19 @@ a:hover { text-decoration: underline; }
   border-radius: 50%;
 }
 
+#instructions {
+  width: 100%;
+  max-width: 500px;
+  margin:auto;
+}
+
+img[usemap] {
+  border: none;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+
 .footer {
   text-transform: uppercase;
   font-weight: bolder;
@@ -52,8 +65,8 @@ a:hover { text-decoration: underline; }
   padding: 4px;
   border-radius: 5% 0% 0% 5%;
   margin: auto;
-  width: 20px;
-  height: 32px;
+  width: 15%;
+  height: 100%;
   line-height: 32px;
   vertical-align: center;
   //position: relative;
